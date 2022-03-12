@@ -1,0 +1,89 @@
+.horizontal-line {
+  background-color: #ff0066;
+  width: 50px; // 使用em/rem
+  height: 2px;
+  margin: 0 auto;
+}
+
+section {
+  padding-top: 3rem;
+}
+
+h1 {
+  font-size: 1.9rem;
+  color: #344;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #344;
+}
+
+.wrap {
+  display: flex;
+  margin: 2rem 0 4rem;
+  width: 1424px; /* width: 100%; */
+  flex-wrap: wrap;
+}
+
+/* card item */
+.item {
+  width: 442px; /* width: calc(100% / 3 - 2rem); */
+  margin: 0 1rem;
+}
+
+.item a {
+  transition: all 0.1s linear;
+}
+
+.item a:hover {
+  color: #ff0066;
+}
+
+.item-img:hover + h2 > a {
+  color: #ff0066;
+}
+
+.item-img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+.item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* button */
+.btn-wrap {
+  display: flex;
+}
+
+.btn {
+  font-size: 1.2rem;
+  color: white;
+  background-color: #ff0044;
+  padding: 0.8rem 2rem;
+  margin: 0 auto;
+  border-radius: 0.25rem;
+  transition: all 0.1s linear;
+}
+
+.btn:hover {
+  background-color: #b81131;
+}

@@ -1,0 +1,23 @@
+p {
+  font-size: 16px;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+p:first-letter {
+  font-size: 50px;
+  float: left;
+  line-height: 0.7;
+  margin: 0.2em;
+}
+
+p::before {
+  content: "";
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  background-color: #ccc;
+  left: 0;
+  top: -5px;
+  z-index: -1;
+}
