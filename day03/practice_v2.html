@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/day03/normalize.css" />
+    <link rel="stylesheet" href="/day03/style_v2.css" />
+    <title>Shopline切版練習 | 第二版</title>
+  </head>
+  <body>
+    <header>
+      <div class="member">
+        <div class="container">
+          <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M352 256C352 278.2 350.8 299.6 348.7 320H163.3C161.2 299.6 159.1 278.2 159.1 256C159.1 233.8 161.2 212.4 163.3 192H348.7C350.8 212.4 352 233.8 352 256zM503.9 192C509.2 212.5 512 233.9 512 256C512 278.1 509.2 299.5 503.9 320H380.8C382.9 299.4 384 277.1 384 256C384 234 382.9 212.6 380.8 192H503.9zM493.4 160H376.7C366.7 96.14 346.9 42.62 321.4 8.442C399.8 29.09 463.4 85.94 493.4 160zM344.3 160H167.7C173.8 123.6 183.2 91.38 194.7 65.35C205.2 41.74 216.9 24.61 228.2 13.81C239.4 3.178 248.7 0 256 0C263.3 0 272.6 3.178 283.8 13.81C295.1 24.61 306.8 41.74 317.3 65.35C328.8 91.38 338.2 123.6 344.3 160H344.3zM18.61 160C48.59 85.94 112.2 29.09 190.6 8.442C165.1 42.62 145.3 96.14 135.3 160H18.61zM131.2 192C129.1 212.6 127.1 234 127.1 256C127.1 277.1 129.1 299.4 131.2 320H8.065C2.8 299.5 0 278.1 0 256C0 233.9 2.8 212.5 8.065 192H131.2zM194.7 446.6C183.2 420.6 173.8 388.4 167.7 352H344.3C338.2 388.4 328.8 420.6 317.3 446.6C306.8 470.3 295.1 487.4 283.8 498.2C272.6 508.8 263.3 512 255.1 512C248.7 512 239.4 508.8 228.2 498.2C216.9 487.4 205.2 470.3 194.7 446.6H194.7zM190.6 503.6C112.2 482.9 48.59 426.1 18.61 352H135.3C145.3 415.9 165.1 469.4 190.6 503.6V503.6zM321.4 503.6C346.9 469.4 366.7 415.9 376.7 352H493.4C463.4 426.1 399.8 482.9 321.4 503.6V503.6z"
+              />
+            </svg>
+          </button>
+          <a href="#">幫助中心</a>
+          <a href="#">登入網店</a>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <a class="logo" href="#">
+            <h1>SHOPLINE</h1>
+          </a>
+          <ul class="navbar">
+            <li class="navbar-item">
+              <a href="" class="navbar-link">
+                開店服務
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="navbar-item">
+              <a href="" class="navbar-link">
+                方案費用
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="navbar-item">
+              <a href="" class="navbar-link">客戶案例</a>
+            </li>
+            <li class="navbar-item">
+              <a href="" class="navbar-link">開店說明會</a>
+            </li>
+            <li class="navbar-item">
+              <a href="" class="navbar-link">開店諮詢</a>
+            </li>
+            <li class="navbar-item">
+              <a href="" class="navbar-link">
+                更多解決方案
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="navbar-item">
+              <a href="" class="navbar-link">
+                其他資源
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <button class="btn" type="button">免費試用</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- No.1 two-col -->
+      <section class="bg-dark-blue">
+        <div class="container">
+          <div class="description">
+            <h2 class="title main-title">
+              想在哪開店創業？
+              <span class="new-line text-orange">社群購物貼近顧客零距離</span>
+            </h2>
+            <p>
+              超過 35 萬品牌使用！從個人賣家到國際品牌，都能以 SHOPLINE
+              實現全通路零售，快速拓展市場到世界各地，輕鬆開始你的『 店
+              』商生意！
+            </p>
+            <form action="POST">
+              <input
+                type="email"
+                placeholder="請在此輸入電子信箱(可隨時更換)"
+              />
+              <button class="btn" type="submit">免費試用</button>
+            </form>
+          </div>
+          <div class="picture">
+            <img
+              src="https://shoplineimg.com/59c0fd06080f0690b5000cd1/6191b3978460a6001735d333/1600x.png?source_format=png%202x,%20https://shoplineimg.com/59c0fd06080f0690b5000cd1/6191b3978460a6001735d333/800x.png?source_format=png%201x"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <!-- No.2 one-col -->
+      <section>
+        <h2 class="title">
+          單一平台就能助你
+          <span class="new-line">在全通路輕鬆開店創業</span>
+        </h2>
+        <p>
+          從網路商店架站到實體門市管理，只需要一個平台，就能輕鬆實現開店創業，
+          <span class="new-line">
+            並能同步管理所有銷售管道，SHOPLINE 助你賣得更多、賣得更好！
+          </span>
+        </p>
+      </section>
+      <!-- No.3-No.6 two-col -->
+      <div class="feature">
+        <section class="info">
+          <div class="container feature">
+            <div class="description">
+              <h2 class="title wave-string">
+                免寫程式、多款版型
+                <span class="new-line">輕鬆打造全能電商網站</span>
+              </h2>
+              <p>
+                不會寫程式也能輕鬆架設品牌電商官網！任何產業都能找到合適的專業設計版型，以滑鼠拖曳就能完成網頁編輯，讓架設網站就像堆積木一樣簡單。
+              </p>
+              <ul class="list">
+                <li class="list-item">豐富版型主題與字型搭配</li>
+                <li class="list-item">獨有網址 ＆ SSL 安全憑證</li>
+                <li class="list-item">一頁商店</li>
+                <li class="list-item">RWD 響應式網頁設計</li>
+                <li class="list-item">SEO 搜尋引擎優化</li>
+                <li class="list-item">開放 HTML／CSS 編輯</li>
+              </ul>
+              <a class="link-flex-arrow" href="#"
+                >看看開店密技
+                <div class="flex-arrow"></div>
+              </a>
+            </div>
+            <div class="picture">
+              <img
+                src="https://shoplineimg.com/59c0fd06080f0690b5000cd1/60b0c566ec23b10026db7112/1130x.webp?source_format=png"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+        <section class="info">
+          <div class="container feature">
+            <div class="description">
+              <h2 class="title wave-string">
+                免寫程式、多款版型
+                <span class="new-line">輕鬆打造全能電商網站</span>
+              </h2>
+              <p>
+                不會寫程式也能輕鬆架設品牌電商官網！任何產業都能找到合適的專業設計版型，以滑鼠拖曳就能完成網頁編輯，讓架設網站就像堆積木一樣簡單。
+              </p>
+              <ul class="list">
+                <li class="list-item">豐富版型主題與字型搭配</li>
+                <li class="list-item">獨有網址 ＆ SSL 安全憑證</li>
+                <li class="list-item">一頁商店</li>
+                <li class="list-item">RWD 響應式網頁設計</li>
+                <li class="list-item">SEO 搜尋引擎優化</li>
+                <li class="list-item">開放 HTML／CSS 編輯</li>
+              </ul>
+              <a class="link-flex-arrow" href="#"
+                >看看開店密技
+                <div class="flex-arrow"></div>
+              </a>
+            </div>
+            <div class="picture">
+              <img
+                src="https://shoplineimg.com/59c0fd06080f0690b5000cd1/60b0c566ec23b10026db7112/1130x.webp?source_format=png"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+        <section class="info">
+          <div class="container feature">
+            <div class="description">
+              <h2 class="title wave-string">
+                免寫程式、多款版型
+                <span class="new-line">輕鬆打造全能電商網站</span>
+              </h2>
+              <p>
+                不會寫程式也能輕鬆架設品牌電商官網！任何產業都能找到合適的專業設計版型，以滑鼠拖曳就能完成網頁編輯，讓架設網站就像堆積木一樣簡單。
+              </p>
+              <ul class="list">
+                <li class="list-item">豐富版型主題與字型搭配</li>
+                <li class="list-item">獨有網址 ＆ SSL 安全憑證</li>
+                <li class="list-item">一頁商店</li>
+                <li class="list-item">RWD 響應式網頁設計</li>
+                <li class="list-item">SEO 搜尋引擎優化</li>
+                <li class="list-item">開放 HTML／CSS 編輯</li>
+              </ul>
+              <a class="link-flex-arrow" href="#"
+                >看看開店密技
+                <div class="flex-arrow"></div>
+              </a>
+            </div>
+            <div class="picture">
+              <img
+                src="https://shoplineimg.com/59c0fd06080f0690b5000cd1/60b0c566ec23b10026db7112/1130x.webp?source_format=png"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+        <section class="info">
+          <div class="container">
+            <div class="description">
+              <h2 class="title wave-string">
+                免寫程式、多款版型
+                <span class="new-line">輕鬆打造全能電商網站</span>
+              </h2>
+              <p>
+                不會寫程式也能輕鬆架設品牌電商官網！任何產業都能找到合適的專業設計版型，以滑鼠拖曳就能完成網頁編輯，讓架設網站就像堆積木一樣簡單。
+              </p>
+              <ul class="list">
+                <li class="list-item">豐富版型主題與字型搭配</li>
+                <li class="list-item">獨有網址 ＆ SSL 安全憑證</li>
+                <li class="list-item">一頁商店</li>
+                <li class="list-item">RWD 響應式網頁設計</li>
+                <li class="list-item">SEO 搜尋引擎優化</li>
+                <li class="list-item">開放 HTML／CSS 編輯</li>
+              </ul>
+              <a class="link-flex-arrow" href="#"
+                >看看開店密技
+                <div class="flex-arrow"></div>
+              </a>
+            </div>
+            <div class="picture">
+              <img
+                src="https://shoplineimg.com/59c0fd06080f0690b5000cd1/60b0c566ec23b10026db7112/1130x.webp?source_format=png"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- No.7 one-col -->
+      <section class="bg-light-grey">
+        <div class="container vertical-container">
+          <h2 class="title">更多功能與服務</h2>
+          <div class="item-group col-3">
+            <div class="item">
+              <div class="circle-img">
+                <img
+                  src="https://img.shoplineapp.com/media/image_clips/5efef5c3b774cf002ab000ce/original.png?1593767363"
+                  alt=""
+                />
+              </div>
+              <h3 class="font-regular">強大庫存及訂單系統</h3>
+              <p>
+                從商品數量、貨況到訂單付款狀態、物流貨態一目瞭然，提升營運效率超有感。
+              </p>
+            </div>
+            <div class="item">
+              <div class="circle-img">
+                <img
+                  src="https://img.shoplineapp.com/media/image_clips/5efef5c4b774cf0027b00084/original.png?1593767364"
+                  alt=""
+                />
+              </div>
+              <h3 class="font-regular">即時化商店業績分析</h3>
+              <p>
+                圖表化報表助你一手掌握商店概況，讓數據助攻企業成長，營運策略更有方向。
+              </p>
+            </div>
+            <div class="item">
+              <div class="circle-img">
+                <img
+                  src="https://img.shoplineapp.com/media/image_clips/5f34a2e10225e00039a716b9/original.png?1597285089"
+                  alt=""
+                />
+              </div>
+              <h3 class="font-regular">多國語系、幣值切換</h3>
+              <p>
+                想做跨境電商也ＯＫ！提供語言、幣別、稅金等進階功能，友善應對海外消費需求。
+              </p>
+            </div>
+            <div class="item">
+              <div class="circle-img">
+                <img
+                  src="https://img.shoplineapp.com/media/image_clips/5f34a2e11468c4003c7aace6/original.png?1597285089"
+                  alt=""
+                />
+              </div>
+              <h3 class="font-regular">專業顧問線上支援</h3>
+              <p>
+                迅速、透明的溝通管道，協助你快速解決從線上到線下、從在地到海外的網店疑難。
+              </p>
+            </div>
+            <div class="item">
+              <div class="circle-img">
+                <img
+                  src="https://img.shoplineapp.com/media/image_clips/5f34a2e11468c472e47aa8e9/original.png?1597285089"
+                  alt=""
+                />
+              </div>
+              <h3 class="font-regular">廣告行銷加值服務</h3>
+              <p>
+                由官方認證的專業投手團隊，協助品牌投遞Facebook、Google、LINE等廣告。
+              </p>
+            </div>
+            <div class="item">
+              <div class="circle-img">
+                <img
+                  src="https://img.shoplineapp.com/media/image_clips/5f34a2e16200760045e6138f/original.png?1597285089"
+                  alt=""
+                />
+              </div>
+              <h3 class="font-regular">老闆專屬成長社群</h3>
+              <p>
+                致力為品牌店家打造能深度交流且互助的生態體系，是拓展人脈、商機的絕佳場域。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- No.8 one-col -->
+      <section class="brand">
+        <div class="container vertical-container">
+          <h2 class="title">
+            <span class="text-blue">人氣品牌</span>一致推薦使用
+          </h2>
+          <ul class="navbar">
+            <li class="navbar-item">
+              <a class="navbar-link actived" href="#">
+                <div>
+                  <img
+                    src="https://img.shoplineapp.com/media/image_clips/5f069a12feeae8003fe59f47/original.png?1594268178"
+                    alt=""
+                  /></div
+              ></a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#">
+                <div>
+                  <img
+                    src="https://img.shoplineapp.com/media/image_clips/5f069a13cedc2b0039c4f999/original.png?1594268179"
+                    alt=""
+                  /></div
+              ></a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#">
+                <div>
+                  <img
+                    src="https://img.shoplineapp.com/media/image_clips/5f069a1350582e0033a6799c/original.png?1594268179"
+                    alt=""
+                  /></div
+              ></a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#">
+                <div>
+                  <img
+                    src="https://img.shoplineapp.com/media/image_clips/6176479679cb610011c381fa/original.png?1635141526"
+                    alt=""
+                  /></div
+              ></a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#">
+                <div>
+                  <img
+                    src="https://img.shoplineapp.com/media/image_clips/618b6b452f40e6001157a311/original.png?1636526917"
+                    alt=""
+                  /></div
+              ></a>
+            </li>
+          </ul>
+          <div class="carousel">
+            <div class="description">
+              <a class="link-flex-arrow" href="#"
+                >bonnyread.com.tw
+                <div class="flex-arrow"></div
+              ></a>
+              <p>
+                SHOPLINE在行動裝置上操作的順暢度很高；使用者給的建議與意見會採納，處理的速度也不錯；還一直有新功能推出，不斷成長。
+              </p>
+              <span class="new-line">- BONNY & READ 店長, Stan</span>
+            </div>
+            <div class="picture">
+              <img
+                src="https://img.shoplineapp.com/media/image_clips/5f06bed2436e2b86c4471215/original.jpg?1594277585"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- No.9 one-col -->
+      <section class="bg-dark-blue banner">
+        <div class="container">
+          <h2 class="main-title">
+            全亞洲超過
+            <span class="new-line">
+              <span>350,000</span>個品牌都在使用SHOPLINE
+            </span>
+          </h2>
+          <div class="banner-btn">
+            <a class="btn link-flex-arrow" href="#"
+              >免費試用14天
+              <div class="flex-arrow flex-arrow-white"></div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container vertical-container">
+        <div class="footer-item-group">
+          <div class="item">
+            <h3>SHOPLINE</h3>
+            <a href="#">
+              <p>認識團隊</p>
+            </a>
+            <a href="#">
+              <p>關於我們</p>
+            </a>
+            <a href="#">
+              <p>人才招募</p>
+            </a>
+            <a href="#">
+              <p>合作機會</p>
+            </a>
+            <a href="#">
+              <p>精選夥伴</p>
+            </a>
+            <a href="#">
+              <p>媒體報導</p>
+            </a>
+          </div>
+          <div class="item">
+            <h3>我要開店</h3>
+            <p>方案費用</p>
+            <p>功能模組</p>
+            <p>客戶案例</p>
+            <p>開店說明會</p>
+            <p>開店諮詢</p>
+          </div>
+          <div class="item">
+            <h3>功能特色</h3>
+            <p>網路開店</p>
+            <p>社群購物</p>
+            <p>零售 POS</p>
+            <p>網路商店</p>
+            <p>網站製作</p>
+            <p>電商物流</p>
+            <p>訂單管理</p>
+            <p>一頁商店</p>
+          </div>
+          <div class="item">
+            <h3>開店資源</h3>
+            <p>開店秘技</p>
+            <p>版型主題</p>
+            <p>新手問答</p>
+            <p>POS 硬體</p>
+            <p>最新功能</p>
+          </div>
+          <div class="item">
+            <h3>更多解決方案</h3>
+            <p>企業旗艦方案</p>
+            <p>跨境電商方案</p>
+            <p>廣告計畫方案</p>
+          </div>
+          <div class="item">
+            <h3>其他資源</h3>
+            <p>電商教室</p>
+            <p>充電工作坊</p>
+            <p>DreamBig 創品牌</p>
+            <p>電商成長學苑</p>
+            <p>SHOPLINE TRENDS 電商數據庫</p>
+            <p>LINE 官方帳號</p>
+          </div>
+          <div class="item">
+            <h3>應用案例</h3>
+            <p>SHOPLINE Payments</p>
+            <p>網紅口碑行銷方案</p>
+            <p>實體零售</p>
+            <p>IG 直播 +1</p>
+            <p>社群電商工具包</p>
+          </div>
+        </div>
+        <div class="covid">
+          <a class="btn" href="#">COVID-19應變措施</a>
+        </div>
+      </div>
+      <div class="container">
+        <div class="member">
+          <a href="#">網站地圖</a>
+          <a href="#">隱私權政策</a>
+          <a href="#">會員條款</a>
+        </div>
+        <ul class="navbar social-media">
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">
+              <svg
+                class="fb-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path
+                  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M144 208C126.3 208 112 222.2 112 239.1C112 257.7 126.3 272 144 272s31.1-14.25 31.1-32S161.8 208 144 208zM256 207.1c-17.75 0-31.1 14.25-31.1 32s14.25 31.1 31.1 31.1s31.1-14.25 31.1-31.1S273.8 207.1 256 207.1zM368 208c-17.75 0-31.1 14.25-31.1 32s14.25 32 31.1 32c17.75 0 31.99-14.25 31.99-32C400 222.2 385.8 208 368 208zM256 31.1c-141.4 0-255.1 93.12-255.1 208c0 47.62 19.91 91.25 52.91 126.3c-14.87 39.5-45.87 72.88-46.37 73.25c-6.624 7-8.373 17.25-4.624 26C5.818 474.2 14.38 480 24 480c61.49 0 109.1-25.75 139.1-46.25c28.87 9 60.16 14.25 92.9 14.25c141.4 0 255.1-93.13 255.1-207.1S397.4 31.1 256 31.1zM256 400c-26.75 0-53.12-4.125-78.36-12.12l-22.75-7.125L135.4 394.5c-14.25 10.12-33.87 21.38-57.49 29c7.374-12.12 14.37-25.75 19.87-40.25l10.62-28l-20.62-21.87C69.81 314.1 48.06 282.2 48.06 240c0-88.25 93.24-160 207.1-160s207.1 71.75 207.1 160S370.8 400 256 400z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M448 64H64C28.65 64 0 92.65 0 128v256c0 35.35 28.65 64 64 64h384c35.35 0 64-28.65 64-64V128C512 92.65 483.3 64 448 64zM64 112h384c8.822 0 16 7.178 16 16v22.16l-166.8 138.1c-23.19 19.28-59.34 19.27-82.47 .0156L48 150.2V128C48 119.2 55.18 112 64 112zM448 400H64c-8.822 0-16-7.178-16-16V212.7l136.1 113.4C204.3 342.8 229.8 352 256 352s51.75-9.188 71.97-25.98L464 212.7V384C464 392.8 456.8 400 448 400z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="copyright">
+          服務時間 星期一至五 上午 10 點至晚上 7 點
+          <span class="new-line"> © Copyright 2013-22 SHOPLINE Limited.</span>
+        </div>
+      </div>
+    </footer>
+    <div class="service">
+      <button id="service-btn">
+        <svg
+          class="actived"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        >
+          <path
+            d="M191.1 224c0-17.72-14.34-32.04-32-32.04L144 192c-35.34 0-64 28.66-64 64.08v47.79C80 339.3 108.7 368 144 368H160c17.66 0 32-14.36 32-32.06L191.1 224zM256 0C112.9 0 4.583 119.1 .0208 256L0 296C0 309.3 10.75 320 23.1 320S48 309.3 48 296V256c0-114.7 93.34-207.8 208-207.8C370.7 48.2 464 141.3 464 256v144c0 22.09-17.91 40-40 40h-110.7C305 425.7 289.7 416 272 416H241.8c-23.21 0-44.5 15.69-48.87 38.49C187 485.2 210.4 512 239.1 512H272c17.72 0 33.03-9.711 41.34-24H424c48.6 0 88-39.4 88-88V256C507.4 119.1 399.1 0 256 0zM368 368c35.34 0 64-28.7 64-64.13V256.1C432 220.7 403.3 192 368 192l-16 0c-17.66 0-32 14.34-32 32.04L320 335.9C320 353.7 334.3 368 352 368H368z"
+          />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+          <path
+            d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>
