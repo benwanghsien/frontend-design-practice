@@ -5,10 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./normalize.css" />
-    <link rel="stylesheet" href="./rwd_practice.html" />
-    <title>CSS RWD練習</title>
+    <link rel="stylesheet" href="./rwd_practice.css" />
+    <title>CSS作業 RWD練習</title>
   </head>
   <body>
-    <div class="container"></div>
+    <section class="teachers">
+      <div class="container">
+        <div class="info">
+          <h2 class="horizontal-line">講師陣容</h2>
+          <p>
+            我們的講師長期專注於網站開發技術領域，透過研討會、社群演講及授課方式將技術知識分享給更多人知道，讓更多人了解各個技術的美好之處。
+          </p>
+        </div>
+        <!-- card 1-->
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-6 card">
+            <!-- card-pic -->
+            <div class="row-md card-pic">
+              <div class="avatar">
+                <img src="https://picsum.photos/300/200?random=1" alt="" />
+              </div>
+              <div class="card-pic-name">
+                <p class="horizontal-line">HTML / CSS 講師</p>
+                <h3>李建杭 (Amos Lee)</h3>
+                <div class="icon-group">
+                  <div class="icon">
+                    <a href="">
+                      <img src="https://picsum.photos/300/200?random=10" alt=""
+                    /></a>
+                  </div>
+                  <div class="icon">
+                    <a href="">
+                      <img src="https://picsum.photos/300/200?random=10" alt=""
+                    /></a>
+                  </div>
+                  <div class="icon">
+                    <a href="">
+                      <img src="https://picsum.photos/300/200?random=10" alt=""
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- card-info -->
+            <div class="row">
+              <div class="col-12">
+                <p>
+                  從視覺設計轉職前端的斜槓開發者，活躍於臺灣各大技術研討會，熟稔
+                  HTML & CSS、Bootstrap、RWD、CSS3 等，為國內知名前端技術講師。
+                </p>
+                <p>
+                  2018 年成為
+                  <a class="other-site" href="">Youtuber</a
+                  >，致力於使用簡單易懂的方式讓新手能夠輕鬆學習前端開發技能。
+                </p>
+                <p>
+                  <a href="" class="other-site">iT 邦幫忙鐵人賽</a
+                  >連續三屆冠軍、連續兩屆優選，於 2020 出版「<a
+                    href=""
+                    class="other-site"
+                  >
+                    金魚都能懂的 CSS
+                    選取器：金魚都能懂了你還怕學不會嗎（iT邦幫忙鐵人賽系列書） </a
+                  >」一書，除了熱衷於牛排的熟成，目前日益精進於釣魚技能。
+                </p>
+              </div>
+            </div>
+            <!-- card-separate -->
+            <div class="row separate-line-group">
+              <p>講師其他課程</p>
+              <div class="separate-line"></div>
+            </div>
+            <!-- card-button -->
+            <div class="row">
+              <div class="col-12">
+                <a class="btn" href="">網頁前端設計女性專班</a>
+                <a class="btn" href="">HTML 網頁設計新手村</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
