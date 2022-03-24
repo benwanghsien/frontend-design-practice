@@ -14,7 +14,7 @@
 }
 
 .feature {
-  width: calc(var(--container-width) * 0.75);
+  /* width: calc(var(--container-width) * 0.75); */
   position: absolute;
   color: white;
   z-index: 1;
