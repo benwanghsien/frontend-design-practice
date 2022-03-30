@@ -171,7 +171,6 @@ button.carousel-btn-actived {
   content: "";
   display: block;
   width: 100%;
-  position: relative;
   background-color: #fff;
   clip-path: polygon(0px 0%, 0% 75%, 33.33% 0%, 100% 75%, 100% 0%, 33.33% 0);
   aspect-ratio: 8 / 1;
@@ -303,7 +302,6 @@ button.carousel-btn-actived {
   content: "";
   display: block;
   width: 100%;
-  position: relative;
   background-color: #aaa;
   clip-path: polygon(0px 0%, 0% 75%, 33.33% 0%, 100% 75%, 100% 0%, 33.33% 0);
   aspect-ratio: 8 / 1;
@@ -313,7 +311,6 @@ button.carousel-btn-actived {
   content: "";
   display: block;
   width: 100%;
-  position: relative;
   background-color: #aaa;
   clip-path: polygon(
     0 20%,
@@ -351,55 +348,75 @@ button.carousel-btn-actived {
   text-align: center;
 }
 
-.course-carousel {
+.course-carousel-wrap {
   width: 90%;
+  margin-left: auto;
   background-color: #f00;
   position: relative;
-  margin-left: auto;
 }
 
-.course-carousel::before {
+.course-carousel-wrap::before {
   content: "";
   display: block;
   width: 100%;
-  position: relative;
-  background-color: #345;
-  clip-path: polygon(0 100%, 0% 0%, 66.66% 0%, 100% 0%, 100% 100%, 66.66% -0%);
-  aspect-ratio: 8 / 1;
-}
-.course-carousel::after {
-  content: "";
-  display: block;
-  width: 100%;
-  position: relative;
   background-color: #345;
   clip-path: polygon(
-    0 20%,
-    0% 101%,
+    -1% 101%,
+    -1% -1%,
+    66.66% -1%,
+    101% -1%,
+    101% 101%,
+    66.66% -1%
+  );
+  aspect-ratio: 8 / 1;
+}
+
+.course-carousel-wrap::after {
+  content: "";
+  display: block;
+  width: 100%;
+  background-color: #345;
+  clip-path: polygon(
+    -1% -1%,
+    -1% 101%,
     33.33% 101%,
-    100% 101%,
-    100% 0%,
+    101% 101%,
+    101% -1%,
     33.33% 101%
   );
   aspect-ratio: 8 / 1;
 }
 
-.course-carousel a {
+.course-carousel-wrap a {
   color: white;
 }
 
-.course-carousel a:hover {
+.course-carousel-wrap a:hover {
   text-decoration: underline;
 }
 
+.course-carousel {
+  overflow: hidden;
+}
+
+.course-carousel-item-wrap {
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+
 .course-carousel-item {
+  flex-shrink: 0;
+  width: 100%;
   padding: 24px;
+  box-sizing: border-box;
 }
 
 .course-carousel-btn-group {
   position: absolute;
   left: -24px;
-  bottom: 0;
+  bottom: 15%;
 }
 
 .course-carousel-btn {
@@ -640,7 +657,6 @@ button.carousel-btn-actived {
   content: "";
   display: block;
   width: 100%;
-  position: relative;
   background-color: #f0f0f0;
   clip-path: polygon(0px 0%, 0% 75%, 33.33% 0%, 100% 75%, 100% 0%, 33.33% 0);
   aspect-ratio: 8 / 1;
@@ -877,10 +893,8 @@ button.carousel-btn-actived {
     box-sizing: border-box;
   }
 
-  .course-carousel {
+  .course-carousel-wrap {
     width: 50%;
-    background-color: #f00;
-    position: relative;
   }
 
   .course-avatar {

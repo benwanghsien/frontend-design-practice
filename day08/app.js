@@ -5,13 +5,8 @@ hamburgerBtn.addEventListener("click", (e) => {
   e.target.nextElementSibling.classList.toggle("toggle");
 });
 
+// carousel function
 // article carousel
-const atricleCarouselBtnGroup = document.querySelector(
-  "div.article-carousel-btn-group"
-);
-let atricleCarouselButtonIndex = {
-  index: 0,
-};
 function setPosition(ratio, index) {
   const articleCarouselItemWrap = document.querySelector(
     ".article-carousel-group"
@@ -42,31 +37,7 @@ function getCourselRatio() {
   return carouselRatio;
 }
 
-window.addEventListener("resize", () => {
-  setPosition(getCourselRatio(), atricleCarouselButtonIndex.index);
-});
-
-atricleCarouselBtnGroup.addEventListener("click", function (e) {
-  if (
-    e.target.tagName === "BUTTON" &&
-    !e.target.classList.contains("carousel-btn-actived")
-  ) {
-    // find clicked btn index
-    [].slice.call(this.children).forEach((ele, idx) => {
-      // toggle class name of btn
-      ele.classList.remove("carousel-btn-actived");
-
-      if (e.target === ele) {
-        atricleCarouselButtonIndex.index = idx;
-        ele.classList.add("carousel-btn-actived");
-      }
-    });
-
-    // set position
-    setPosition(getCourselRatio(), atricleCarouselButtonIndex.index);
-  }
-});
-
+// common
 // play carousel automatically
 function playCarouselAutomatically(startIndex, btnGroupDOM) {
   const timer = setInterval(() => {
@@ -91,6 +62,40 @@ function playCarouselAutomatically(startIndex, btnGroupDOM) {
   return timer;
 }
 
+// reposition while user resize viewport
+window.addEventListener("resize", () => {
+  setPosition(getCourselRatio(), atricleCarouselButtonIndex.index);
+});
+
+// article carousel
+const atricleCarouselBtnGroup = document.querySelector(
+  "div.article-carousel-btn-group"
+);
+let atricleCarouselButtonIndex = {
+  index: 0,
+};
+
+atricleCarouselBtnGroup.addEventListener("click", function (e) {
+  if (
+    e.target.tagName === "BUTTON" &&
+    !e.target.classList.contains("carousel-btn-actived")
+  ) {
+    // find clicked btn index
+    [].slice.call(this.children).forEach((ele, idx) => {
+      // toggle class name of btn
+      ele.classList.remove("carousel-btn-actived");
+
+      if (e.target === ele) {
+        atricleCarouselButtonIndex.index = idx;
+        ele.classList.add("carousel-btn-actived");
+      }
+    });
+
+    // set position
+    setPosition(getCourselRatio(), atricleCarouselButtonIndex.index);
+  }
+});
+
 let atricleCarouselTimer = playCarouselAutomatically(
   atricleCarouselButtonIndex.index,
   atricleCarouselBtnGroup
@@ -110,4 +115,98 @@ document
       atricleCarouselButtonIndex.index,
       atricleCarouselBtnGroup
     );
+  });
+
+// course carousel
+const courseCarouselBtnGroup = document.querySelector(
+  ".course-carousel-btn-group"
+);
+let courseCarouselButtonIndex = {
+  index: 0,
+};
+
+courseCarouselBtnGroup.addEventListener("click", function (e) {
+  if (
+    e.target.tagName === "BUTTON" &&
+    !e.target.classList.contains("carousel-btn-actived")
+  ) {
+    [].slice.call(courseCarouselBtnGroup.children).forEach((ele, idx) => {
+      ele.classList.remove("carousel-btn-actived");
+
+      if (e.target === ele) {
+        e.target.classList.add("carousel-btn-actived");
+        courseCarouselButtonIndex.index = idx;
+      }
+    });
+  }
+
+  const courseCourselItemWrap = document.querySelector(
+    ".course-carousel-item-wrap"
+  );
+
+  courseCourselItemWrap.style.left = `-${
+    100 * courseCarouselButtonIndex.index
+  }%`;
+});
+
+let courseCarouselTimer = setInterval(() => {
+  courseCarouselButtonIndex.index++;
+
+  if (
+    courseCarouselButtonIndex.index === courseCarouselBtnGroup.children.length
+  ) {
+    courseCarouselButtonIndex.index = 0;
+  }
+
+  const courseCourselItemWrap = document.querySelector(
+    ".course-carousel-item-wrap"
+  );
+
+  courseCourselItemWrap.style.left = `-${
+    100 * courseCarouselButtonIndex.index
+  }%`;
+
+  [].slice.call(courseCarouselBtnGroup.children).forEach((ele, idx) => {
+    ele.classList.remove("carousel-btn-actived");
+
+    courseCarouselBtnGroup.children[
+      courseCarouselButtonIndex.index
+    ].classList.add("carousel-btn-actived");
+  });
+}, 3000);
+
+document
+  .querySelector(".course-carousel-item-wrap")
+  .addEventListener("mouseover", () => {
+    clearInterval(courseCarouselTimer);
+  });
+document
+  .querySelector(".course-carousel-item-wrap")
+  .addEventListener("mouseout", () => {
+    courseCarouselTimer = setInterval(() => {
+      courseCarouselButtonIndex.index++;
+
+      if (
+        courseCarouselButtonIndex.index ===
+        courseCarouselBtnGroup.children.length
+      ) {
+        courseCarouselButtonIndex.index = 0;
+      }
+
+      const courseCourselItemWrap = document.querySelector(
+        ".course-carousel-item-wrap"
+      );
+
+      courseCourselItemWrap.style.left = `-${
+        100 * courseCarouselButtonIndex.index
+      }%`;
+
+      [].slice.call(courseCarouselBtnGroup.children).forEach((ele, idx) => {
+        ele.classList.remove("carousel-btn-actived");
+
+        courseCarouselBtnGroup.children[
+          courseCarouselButtonIndex.index
+        ].classList.add("carousel-btn-actived");
+      });
+    }, 3000);
   });
