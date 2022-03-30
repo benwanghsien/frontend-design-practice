@@ -6,6 +6,12 @@ hamburgerBtn.addEventListener("click", (e) => {
 });
 
 // article carousel
+const atricleCarouselBtnGroup = document.querySelector(
+  "div.article-carousel-btn-group"
+);
+let atricleCarouselButtonIndex = {
+  index: 0,
+};
 function setPosition(ratio, index) {
   const articleCarouselItemWrap = document.querySelector(
     ".article-carousel-group"
@@ -37,40 +43,71 @@ function getCourselRatio() {
 }
 
 window.addEventListener("resize", () => {
-  document.querySelector(".article-carousel-group").style.left = "";
-
-  // find clicked btn index
-  let buttonIndex = 0;
-  [].slice
-    .call(document.querySelector("div.article-carousel-btn-group").children)
-    .forEach((ele, idx) => {
-      if (ele.classList.contains("carousel-btn-actived")) {
-        buttonIndex = idx;
-      }
-    });
-  setPosition(getCourselRatio(), buttonIndex);
+  setPosition(getCourselRatio(), atricleCarouselButtonIndex.index);
 });
 
-document
-  .querySelector("div.article-carousel-btn-group")
-  .addEventListener("click", function (e) {
-    if (
-      e.target.tagName === "BUTTON" &&
-      !e.target.classList.contains("carousel-btn-actived")
-    ) {
-      // find clicked btn index
-      let buttonIndex = 0;
-      [].slice.call(this.children).forEach((ele, idx) => {
-        // toggle class name of btn
-        ele.classList.remove("carousel-btn-actived");
+atricleCarouselBtnGroup.addEventListener("click", function (e) {
+  if (
+    e.target.tagName === "BUTTON" &&
+    !e.target.classList.contains("carousel-btn-actived")
+  ) {
+    // find clicked btn index
+    [].slice.call(this.children).forEach((ele, idx) => {
+      // toggle class name of btn
+      ele.classList.remove("carousel-btn-actived");
 
-        if (e.target === ele) {
-          buttonIndex = idx;
-          ele.classList.add("carousel-btn-actived");
-        }
-      });
+      if (e.target === ele) {
+        atricleCarouselButtonIndex.index = idx;
+        ele.classList.add("carousel-btn-actived");
+      }
+    });
 
-      // set position
-      setPosition(getCourselRatio(), buttonIndex);
+    // set position
+    setPosition(getCourselRatio(), atricleCarouselButtonIndex.index);
+  }
+});
+
+// play carousel automatically
+function playCarouselAutomatically(startIndex, btnGroupDOM) {
+  const timer = setInterval(() => {
+    startIndex++;
+
+    if (startIndex === btnGroupDOM.children.length) {
+      startIndex = 0;
     }
+
+    setPosition(getCourselRatio(), startIndex);
+
+    // find clicked btn index
+    [].slice.call(btnGroupDOM.children).forEach((ele, idx) => {
+      // toggle class name of btn
+      ele.classList.remove("carousel-btn-actived");
+    });
+
+    btnGroupDOM.children[startIndex].classList.add("carousel-btn-actived");
+    atricleCarouselButtonIndex.index = startIndex;
+  }, 3000);
+
+  return timer;
+}
+
+let atricleCarouselTimer = playCarouselAutomatically(
+  atricleCarouselButtonIndex.index,
+  atricleCarouselBtnGroup
+);
+
+// stop carousel while hover in, and replay while hover out
+document
+  .querySelector(".article-carousel-group")
+  .addEventListener("mouseover", () => {
+    clearInterval(atricleCarouselTimer);
+  });
+
+document
+  .querySelector(".article-carousel-group")
+  .addEventListener("mouseout", () => {
+    atricleCarouselTimer = playCarouselAutomatically(
+      atricleCarouselButtonIndex.index,
+      atricleCarouselBtnGroup
+    );
   });
